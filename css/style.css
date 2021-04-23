@@ -1829,6 +1829,35 @@ figure {
   color: #333;
 }
 
+.references_main_box {
+  height: 240px;
+  position: relative;
+  margin-top: -100px;
+  z-index: 10;
+}
+
+.references_main_box h3 {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  display: inline-block;
+  padding: 0 1em;
+  line-height: 60px;
+  font-size: 24px;
+  background-color: #fff;
+  color: #333;
+}
+
+.references_main_box p {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+}
+
+.references_main_box p span {
+  margin-left: 30px;
+}
+
 @media screen and (max-width: 768px) {
   .sv_list a p {
     font-size: 18px;
@@ -1856,7 +1885,8 @@ figure {
     font-size: 24px;
     margin: 0;
   }
-  #clients_box{
+
+  #clients_box {
     padding-bottom: 15px;
   }
 
@@ -1876,9 +1906,7 @@ figure {
     transform: translate(-50%,-50%); */
   }
 
-  .clients_item
-
-  .clients_item span.active h3 {
+  .clients_item .clients_item span.active h3 {
     margin: 20% 0 10px 0;
   }
 
@@ -1894,7 +1922,7 @@ figure {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
 

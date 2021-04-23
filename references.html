@@ -54,19 +54,24 @@
 		.pull-left {
 			display: none;
 		}
-		#table thead{
+
+		#table thead {
 			display: none !important;
 		}
-		#table tr td:nth-child(1){
-			width: 40%;
+
+		#table tr td:nth-child(1) {
+			width: 45%;
 		}
-		#table tr td:nth-child(2){
-			width: 15%;
+
+		#table tr td:nth-child(2) {
+			width: 12%;
 		}
-		#table tr td:last-child{
+
+		#table tr td:last-child {
 			text-align: right;
 		}
-		#table td{
+
+		#table td {
 			border: 0;
 			font-family: 'AVENIR-M';
 			font-size: 24px;
@@ -74,13 +79,16 @@
 			color: #555;
 			cursor: pointer;
 		}
-		.table-bordered{
+
+		.table-bordered {
 			border: 0;
 		}
-		.table-hover > tbody > tr:hover {
+
+		.table-hover>tbody>tr:hover {
 			background: none !important;
 		}
-		.table-hover > tbody > tr:hover td {
+
+		.table-hover>tbody>tr:hover td {
 			color: #b01319 !important;
 		}
 	</style>
@@ -213,51 +221,35 @@
 
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
-	<script src="data.json"></script>
-
-	<script>
-		$(function(){
-			var paramMap = listData;
-
-		$('#table').bootstrapTable({
-				pagination : true,
-				pageSize : 5,
-				columns: [{
-					field: 'title',
-					title: 'Item title'
-				}, {
-					field: 'year',
-					title: 'Item year'
-				}, {
-					field: 'date',
-					title: 'Item date'
-				}, {
-					field: 'add',
-					title: 'Item add'
-				}, ],
-				data: paramMap,
-				// data: [
-				// 	{"id":1,"title":"Alberto Giacometti’s Retrospective","year":2016,"date":"3.22-7.31","add":"Shanghai Yuz Museum"},
-				// 	{"id":2,"title":"Rain Room by Random International","year":2015,"date":"9.1-1.3","add":"Shanghai Yuz Museum"},
-				// 	{"id":1,"title":"Alberto Giacometti’s Retrospective","year":2016,"date":"3.22-7.31","add":"Shanghai Yuz Museum"},
-				// 	{"id":2,"title":"Rain Room by Random International","year":2015,"date":"9.1-1.3","add":"Shanghai Yuz Museum"},
-				// 	{"id":1,"title":"Alberto Giacometti’s Retrospective","year":2016,"date":"3.22-7.31","add":"Shanghai Yuz Museum"},
-				// 	{"id":2,"title":"Rain Room by Random International","year":2015,"date":"9.1-1.3","add":"Shanghai Yuz Museum"},
-				// 	{"id":1,"title":"Alberto Giacometti’s Retrospective","year":2016,"date":"3.22-7.31","add":"Shanghai Yuz Museum"},
-				// 	{"id":2,"title":"Rain Room by Random International","year":2015,"date":"9.1-1.3","add":"Shanghai Yuz Museum"}
-				// ],
-				onClickRow: function ($element) {
-					console.log($element.id)
-			 	},
-			});
-
-			getTableData()
-
-		});
-	</script>
-
-	<!-- <script>
-	</script> -->
+	<script src="js/data.js"></script>
 </body>
 
 </html>
+
+<script>
+	$(function () {
+		var listData = jsonData;
+		$('#table').bootstrapTable({
+			pagination: true,
+			pageSize: 5,
+			columns: [{
+				field: 'title',
+				title: 'Item title'
+			}, {
+				field: 'year',
+				title: 'Item year'
+			}, {
+				field: 'date',
+				title: 'Item date'
+			}, {
+				field: 'add',
+				title: 'Item add'
+			}, ],
+			data: listData,
+			onClickRow: function ($element) {
+				console.log($element.id)
+				window.location.href = "references_main.html?id=" + $element.id;
+			},
+		});
+	});
+</script>
