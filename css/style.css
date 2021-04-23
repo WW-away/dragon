@@ -1706,9 +1706,9 @@ figure {
   #fh5co-about .mission_box {
     padding: 1em;
   }
-
-  #clients_box .container .clients_item_box {
-    padding: 15px 15px 0;
+  
+  .clients_item {
+    margin: 15px 0;
   }
 }
 
@@ -1756,7 +1756,14 @@ figure {
   }
 
   #clients_box {
-    padding: 1em 0;
+    padding: 2em 0 3em;
+  }
+
+  .clients_item {
+    height: 240px;
+  }
+  #clients_box .container .clients_item_box {
+    padding: 15px 15px 0 0;
   }
 }
 
@@ -1800,6 +1807,10 @@ figure {
 
   .clients_item3 span.active h3 {
     margin: 60% 0 10px 0;
+  }
+
+  #clients_box .container .clients_item_box {
+    padding: 15px 15px 0 0;
   }
 }
 
