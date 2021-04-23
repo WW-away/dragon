@@ -39,6 +39,7 @@
 	<!-- Superfish -->
 	<link rel="stylesheet" href="css/superfish.css">
 
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
 
 
@@ -48,14 +49,13 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
 </head>
 
 <body>
 	<div id="fh5co-wrapper">
 		<div id="fh5co-page">
 			<div id="fh5co-header">
-				<header id="fh5co-header-section">
+				<header id="fh5co-header-section" class="museums-header">
 					<div class="container">
 						<div class="row nav-header">
 							<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
@@ -84,7 +84,7 @@
 										</li>
 										<li><a href="about.html">ABOUT US</a></li>
 										<li class="active"><a href="clients.html">OUR CLIENTS</a></li>
-										<li><a href="">REFERENCES</a></li>
+										<li><a href="references.html">REFERENCES</a></li>
 										<li><a href="">NEWS</a></li>
 										<li><a href="contact.html">CONTACT US</a></li>
 									</ul>
@@ -96,70 +96,29 @@
 				</header>
 			</div>
 
-			<div class="fh5co-hero about-banner">
-				<div class="fh5co-overlay"></div>
-				<div class="fh5co-cover about-banner" style="background-image: url(images/banner.png);">
-					<div class="desc desc_about animate-box container">
-						<h2><strong>OUR CLIENTS</strong></h2>
-						<span>Founded in 2015 in Shanghai, Dragon Fine Art is now a well-known<br> name across China in the field of
-							fine art packing and moving</span>
+			<div class="fh5co-services-section museums-box">
+				<!-- Swiper -->
+				<div class="container animate-box">
+					<a href="clients.html" class="back"><img src="images/back.png" alt=""></a>
+				</div>
+				<div class="container animate-box swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
 					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+
+				<div class="container animate-box">
+					<h3>Exhibitions</h3>
+					<p>Dragon Fine Art engages actively in the logistics of organized art exhibitions throughout the country and abroad. Whether the exhibition is in an art museum, a gallery, a trade show site, a public institution or even a shopping mall, Dragon Fine Art simply makes the import/export, installation/deinstallation a smooth experience that the clients can actually enjoy.</p>
 				</div>
 			</div>
 			<!-- end:header-top -->
-
-			<div id="clients_box">
-				<div class="container animate-box">
-					<div class="row">
-						<div class="col-md-8">
-							<div class="row">
-								<div class="col-md-4 clients_item_box">
-									<div class="clients_item">
-										<span class="active">
-											<h3>ART MUSEUMS</h3><a href="museums.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients1.jpg" alt="">
-									</div>
-								</div>
-								<div class="col-md-8 clients_item_box">
-									<div class="clients_item">
-										<span class="active">
-											<h3>ART MUSEUMS</h3><a href="museums.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients2.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-8 clients_item_box">
-									<div class="clients_item">
-										<span class="active">
-											<h3>ART MUSEUMS</h3><a href="museums.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients4.jpg" alt="">
-									</div>
-								</div>
-								<div class="col-md-4 clients_item_box">
-									<div class="clients_item">
-										<span class="active">
-											<h3>ART MUSEUMS</h3><a href="museums.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients5.jpg" alt="">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 clients_item_box">
-							<div class="clients_item clients_item3">
-								<span class="active">
-									<h3>ART MUSEUMS</h3><a href="museums.html">LEARN MORE</a>
-								</span>
-								<img src="images/clients3.jpg" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<footer>
 				<div id="footer">
@@ -208,21 +167,25 @@
 
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+	<!-- Swiper JS -->
+	<script src="js/swiper-bundle.min.js"></script>
+	<!-- Initialize Swiper -->
+	<script>
+		var myswiper = new Swiper('.museums-box .swiper-container', {
+			autoplay: {
+				delay: 5000,
+				stopOnLastSlide: true
+			},
+			cssMode: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			mousewheel: true,
+			keyboard: true,
+			touchMove: true
+		});
+	</script>
 </body>
 
 </html>
-<script>
-	$(function () {
-		var item = $('.clients_item_box .clients_item');
-		
-		item.mouseenter(function () {
-			$('.clients_item_box .clients_item .active').hide();
-			$(this).find('.active').show()
-			$(this).find('img').css('transform', 'scale(1.2)')
-		});
-		item.mouseleave(function () {
-			$(this).find('.active').hide()
-			$(this).find('img').css('transform', 'scale(1)')
-		})
-	})
-</script>

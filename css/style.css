@@ -111,11 +111,31 @@ figure {
   height: 600px;
 }
 
+.contact-banner {
+  position: relative;
+  height: 400px;
+}
+
 @media screen and (max-width: 768px) {
 
   .fh5co-cover,
   .fh5co-hero {
     height: 700px;
+  }
+
+  .about-banner {
+    position: relative;
+    height: 500px;
+  }
+
+  .contact-banner {
+    position: relative;
+    height: 300px;
+  }
+
+  .contact-banner .fh5co-cover .desc {
+    top: 80%;
+    left: 14%;
   }
 }
 
@@ -187,6 +207,11 @@ figure {
   left: 15%;
 }
 
+.fh5co-cover .desc_contact {
+  top: 74%;
+  left: 15%;
+}
+
 @media screen and (max-width: 768px) {
   .fh5co-cover .desc {
     padding-left: 15px;
@@ -195,7 +220,7 @@ figure {
 }
 
 .fh5co-cover .desc h2 {
-  font-family: 'AVENIR-B';
+  font-family: 'DIN';
   color: #fff;
   text-transform: uppercase;
   font-size: 60px;
@@ -205,7 +230,7 @@ figure {
 }
 
 .fh5co-cover .desc h2 strong {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 72px;
 }
 
@@ -905,7 +930,8 @@ figure {
   width: 100%;
 }
 
-.history-text h3 {
+.history-text h3,
+.contact-text h3 {
   font-family: 'AVENIR-B';
   font-size: 42px;
   line-height: 70px;
@@ -914,10 +940,22 @@ figure {
   position: relative;
 }
 
-.history-text p {
+.contact-text h3 {
+  color: #444;
+  font-size: 30px;
+  line-height: 48px;
+}
+
+.history-text p,
+.contact-text p {
   font-family: 'AVENIR-M';
   font-size: 24px;
+}
 
+.contact-text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #c0c0c0;
 }
 
 @media screen and (max-width: 768px) {
@@ -1655,6 +1693,7 @@ figure {
   top: 45%;
   background-image: url('../images/next.png') !important;
   transform: rotate(180deg);
+  background-repeat: no-repeat;
 }
 
 .swiper-container {
@@ -1690,128 +1729,6 @@ figure {
 
 .sv_list .active P {
   color: #b01319;
-}
-
-@media screen and (max-width: 768px) {
-  .sv_list a p {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .sv_item {
-    height: 170px;
-    margin: 0 0 30px 0;
-  }
-
-  #fh5co-about .mission_box {
-    padding: 1em;
-  }
-  
-  .clients_item {
-    margin: 15px 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-
-  #fh5co-about .mission_box {
-    padding: 1em;
-  }
-
-  #fh5co-about .row p {
-    margin: 0 0 15px;
-  }
-
-  .history-text p {
-    margin: 0 0 15px;
-  }
-}
-
-@media screen and (min-width:992px) and (max-width:1199px) {
-  .container {
-    width: 1040px;
-  }
-
-  .sf-menu a {
-    padding: .25em;
-  }
-
-  #fh5co-about .mission_box {
-    padding: 2em;
-  }
-
-  .fh5co-cover .desc_about {
-    left: 0;
-  }
-
-  #fh5co-about .row p {
-    margin: 0 0 15px;
-  }
-
-  .history-text p {
-    margin: 0 0 15px;
-  }
-
-  #clients_box {
-    padding: 2em 0 3em;
-  }
-
-  .clients_item {
-    height: 240px;
-  }
-  #clients_box .container .clients_item_box {
-    padding: 15px 15px 0 0;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1300px;
-  }
-
-  #fh5co-about .mission_box {
-    padding: 3em 5em;
-  }
-
-  .history-box img {
-    margin-left: -15px;
-  }
-
-  .history-text h3 {
-    margin-top: 40px;
-  }
-
-  #clients_box {
-    padding: 4em 0 3em;
-  }
-
-  #clients_box .container .clients_item_box {
-    padding: 0 15px 15px 0;
-  }
-
-  .clients_item {
-    height: 300px;
-  }
-
-  .clients_item3 {
-    height: 615px;
-    margin-left: 5px;
-  }
-
-  .clients_item span.active h3 {
-    margin: 120px 0 10px 0;
-  }
-
-  .clients_item3 span.active h3 {
-    margin: 60% 0 10px 0;
-  }
-
-  #clients_box .container .clients_item_box {
-    padding: 15px 15px 0 0;
-  }
 }
 
 .clients_item {
@@ -1865,4 +1782,237 @@ figure {
 
 .clients_item span.active a:hover {
   color: #fff !important;
+}
+
+.museums-box {
+  padding-top: 120px;
+}
+
+.museums-header {
+  background-image: linear-gradient(#b01319, #d41a20);
+  /* background-color: #b01319; */
+}
+
+.museums-box a.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #eee;
+  margin: 20px 0;
+}
+
+.museums-box .swiper-container {
+  height: auto;
+}
+
+.museums-box .swiper-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.museums-box h3 {
+  font-family: 'AVENIR-B';
+  font-size: 36px;
+  color: #b01319;
+  line-height: 42px;
+  margin: 20px 0 0;
+}
+
+.museums-box P {
+  font-family: 'AVENIR-M';
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .sv_list a p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .sv_item {
+    height: 170px;
+    margin: 0 0 30px 0;
+  }
+
+  #fh5co-about .mission_box {
+    padding: 1em;
+  }
+
+  .clients_item {
+    margin: 15px 0;
+  }
+
+  .contact-text h3 {
+    margin: 10px 0 0 0;
+  }
+
+  .contact-text p {
+    font-size: 24px;
+    margin: 0;
+  }
+  #clients_box{
+    padding-bottom: 15px;
+  }
+
+  .clients_item {
+    height: 220px;
+    vertical-align: middle;
+    margin: 15px 0 0;
+    /* position: relative; */
+  }
+
+  .clients_item img {
+    height: auto;
+    width: 100%;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+  }
+
+  .clients_item
+
+  .clients_item span.active h3 {
+    margin: 20% 0 10px 0;
+  }
+
+  .museums-box .swiper-wrapper .swiper-slide {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .museums-box .swiper-wrapper .swiper-slide img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+
+  #fh5co-about .mission_box {
+    padding: 1em;
+  }
+
+  #fh5co-about .row p {
+    margin: 0 0 15px;
+  }
+
+  .history-text p {
+    margin: 0 0 15px;
+  }
+
+  .contact-text p {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+  .container {
+    width: 1040px;
+  }
+
+  .sf-menu a {
+    padding: .25em;
+  }
+
+  #fh5co-about .mission_box {
+    padding: 2em;
+  }
+
+  .fh5co-cover .desc_about {
+    left: 0;
+  }
+
+  #fh5co-about .row p {
+    margin: 0 0 15px;
+  }
+
+  .history-text p {
+    margin: 0 0 15px;
+  }
+
+  #clients_box {
+    padding: 2em 0 3em;
+  }
+
+  .clients_item {
+    height: 240px;
+  }
+
+  #clients_box .container .clients_item_box {
+    padding: 15px 15px 0 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1300px;
+  }
+
+  #fh5co-about .mission_box {
+    padding: 3em 5em;
+  }
+
+  .history-box img {
+    margin-left: -15px;
+  }
+
+  .history-text h3 {
+    margin-top: 40px;
+  }
+
+  .contact-text h3 {
+    margin-top: 20px;
+  }
+
+  #clients_box {
+    padding: 4em 0 3em;
+  }
+
+  #clients_box .container .clients_item_box {
+    padding: 0 15px 15px 0;
+  }
+
+  .clients_item {
+    height: 300px;
+  }
+
+  .clients_item3 {
+    height: 615px;
+    margin-left: 5px;
+  }
+
+  .clients_item span.active h3 {
+    margin: 120px 0 10px 0;
+  }
+
+  .clients_item3 span.active h3 {
+    margin: 60% 0 10px 0;
+  }
+
+  #clients_box .container .clients_item_box {
+    padding: 15px 15px 0 0;
+  }
+
+  .museums-box .swiper-wrapper {
+    margin: 0 15px;
+  }
+}
+
+.container H3 {
+  text-transform: uppercase;
 }

@@ -36,6 +36,7 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-table.min.css">
 	<!-- Superfish -->
 	<link rel="stylesheet" href="css/superfish.css">
 
@@ -48,6 +49,41 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+
+	<style>
+		.pull-left {
+			display: none;
+		}
+		#table thead{
+			display: none !important;
+		}
+		#table tr td:nth-child(1){
+			width: 40%;
+		}
+		#table tr td:nth-child(2){
+			width: 15%;
+		}
+		#table tr td:last-child{
+			text-align: right;
+		}
+		#table td{
+			border: 0;
+			font-family: 'AVENIR-M';
+			font-size: 24px;
+			line-height: 3;
+			color: #555;
+			cursor: pointer;
+		}
+		.table-bordered{
+			border: 0;
+		}
+		.table-hover > tbody > tr:hover {
+			background: none !important;
+		}
+		.table-hover > tbody > tr:hover td {
+			color: #b01319 !important;
+		}
+	</style>
 
 </head>
 
@@ -83,8 +119,8 @@
 											</ul>
 										</li>
 										<li><a href="about.html">ABOUT US</a></li>
-										<li class="active"><a href="clients.html">OUR CLIENTS</a></li>
-										<li><a href="">REFERENCES</a></li>
+										<li><a href="clients.html">OUR CLIENTS</a></li>
+										<li class="active"><a href="references.html">REFERENCES</a></li>
 										<li><a href="">NEWS</a></li>
 										<li><a href="contact.html">CONTACT US</a></li>
 									</ul>
@@ -100,7 +136,7 @@
 				<div class="fh5co-overlay"></div>
 				<div class="fh5co-cover about-banner" style="background-image: url(images/banner.png);">
 					<div class="desc desc_about animate-box container">
-						<h2><strong>OUR CLIENTS</strong></h2>
+						<h2><strong>REFERENCES</strong></h2>
 						<span>Founded in 2015 in Shanghai, Dragon Fine Art is now a well-known<br> name across China in the field of
 							fine art packing and moving</span>
 					</div>
@@ -108,67 +144,32 @@
 			</div>
 			<!-- end:header-top -->
 
-			<div id="clients_box">
-				<div class="container animate-box">
-					<div class="row">
-						<div class="col-md-8">
-							<div class="row">
-								<div class="col-md-4 clients_item_box">
-									<div class="clients_item">
-										<span class="active">
-											<h3>ART MUSEUMS</h3><a href="museums.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients1.jpg" alt="">
-									</div>
-								</div>
-								<div class="col-md-8 clients_item_box">
-									<div class="clients_item">
-										<span class="active">
-											<h3>ART MUSEUMS</h3><a href="museums.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients2.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-8 clients_item_box">
-									<div class="clients_item">
-										<span class="active">
-											<h3>ART MUSEUMS</h3><a href="museums.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients4.jpg" alt="">
-									</div>
-								</div>
-								<div class="col-md-4 clients_item_box">
-									<div class="clients_item">
-										<span class="active">
-											<h3>ART MUSEUMS</h3><a href="museums.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients5.jpg" alt="">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 clients_item_box">
-							<div class="clients_item clients_item3">
-								<span class="active">
-									<h3>ART MUSEUMS</h3><a href="museums.html">LEARN MORE</a>
-								</span>
-								<img src="images/clients3.jpg" alt="">
-							</div>
-						</div>
-					</div>
+			<!-- fh5co-content-section -->
+			<div id="fh5co-services-section" id="history-box">
+				<div class="container">
+					<!-- <ul>
+						<li>
+							<a href="">
+								<span>Alberto Giacometti’s Retrospective</span>
+								<span>2016</span>
+								<span>3.22-7.31</span>
+								<span>Shanghai Yuz Museum</span>
+							</a>
+						</li>
+					</ul> -->
+					<table id="table"></table>
 				</div>
 			</div>
+			<!-- END fh5co-services-section -->
 
 			<footer>
 				<div id="footer">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-2 text-center">
+							<div class="col-md-2 col-ms-12 text-center">
 								<img src="images/logo_black.png" alt="">
 							</div>
-							<div class="col-md-10 footer_text">
+							<div class="col-md-10 col-ms-12 footer_text">
 								<ul>
 									<li>© 2021 Dragon Fine Art</li>
 									<li>Dragon Fine Art@163.com</li>
@@ -193,11 +194,15 @@
 	<!-- END fh5co-wrapper -->
 
 	<!-- jQuery -->
+
+
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-table.min.js"></script>
+	<script src="js/bootstrap-table-zh-CN.js"></script>
 	<!-- Waypoints -->
 	<script src="js/jquery.waypoints.min.js"></script>
 	<!-- Stellar -->
@@ -208,21 +213,47 @@
 
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+
+	<script>
+		$(function(){
+			$('#table').bootstrapTable({
+				// url: '/data.json',
+				// method: 'get',
+				pagination : true,
+				pageSize : 5,
+				columns: [{
+					field: 'title',
+					title: 'Item title'
+				}, {
+					field: 'year',
+					title: 'Item year'
+				}, {
+					field: 'date',
+					title: 'Item date'
+				}, {
+					field: 'add',
+					title: 'Item add'
+				}, ],
+				data: [
+					{"id":1,"title":"Alberto Giacometti’s Retrospective","year":2016,"date":"3.22-7.31","add":"Shanghai Yuz Museum"},
+					{"id":2,"title":"Rain Room by Random International","year":2015,"date":"9.1-1.3","add":"Shanghai Yuz Museum"},
+					{"id":1,"title":"Alberto Giacometti’s Retrospective","year":2016,"date":"3.22-7.31","add":"Shanghai Yuz Museum"},
+					{"id":2,"title":"Rain Room by Random International","year":2015,"date":"9.1-1.3","add":"Shanghai Yuz Museum"},
+					{"id":1,"title":"Alberto Giacometti’s Retrospective","year":2016,"date":"3.22-7.31","add":"Shanghai Yuz Museum"},
+					{"id":2,"title":"Rain Room by Random International","year":2015,"date":"9.1-1.3","add":"Shanghai Yuz Museum"},
+					{"id":1,"title":"Alberto Giacometti’s Retrospective","year":2016,"date":"3.22-7.31","add":"Shanghai Yuz Museum"},
+					{"id":2,"title":"Rain Room by Random International","year":2015,"date":"9.1-1.3","add":"Shanghai Yuz Museum"}
+				],
+				onClickRow: function ($element) {
+					console.log($element.id)
+			 	},
+			});
+
+		});
+	</script>
+
+	<!-- <script>
+	</script> -->
 </body>
 
 </html>
-<script>
-	$(function () {
-		var item = $('.clients_item_box .clients_item');
-		
-		item.mouseenter(function () {
-			$('.clients_item_box .clients_item .active').hide();
-			$(this).find('.active').show()
-			$(this).find('img').css('transform', 'scale(1.2)')
-		});
-		item.mouseleave(function () {
-			$(this).find('.active').hide()
-			$(this).find('img').css('transform', 'scale(1)')
-		})
-	})
-</script>
