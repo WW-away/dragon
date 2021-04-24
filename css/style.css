@@ -1806,6 +1806,65 @@ figure {
   margin-left: 30px;
 }
 
+.pagination>.active>a,
+.pagination>.active>a:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span,
+.pagination>.active>span:hover,
+.pagination>.active>span:focus {
+  background-color: #b01319;
+  border-color: #b01319;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+  color: #b01319;
+}
+
+.pagination>li>a:hover,
+.pagination>li>a:focus,
+.pagination>li>span:hover,
+.pagination>li>span:focus {
+  color: #b01319;
+}
+
+
+#references_list thead {
+  display: none !important;
+}
+
+#references_list tr td:nth-child(1) {
+  width: 45%;
+}
+
+#references_list tr td:nth-child(2) {
+  width: 12%;
+}
+
+#references_list tr td:last-child {
+  text-align: right;
+}
+
+#references_list td {
+  border: 0;
+  font-family: 'AVENIR-M';
+  line-height: 3;
+  color: #555;
+  cursor: pointer;
+}
+
+.table-bordered {
+  border: 0;
+}
+
+.table-hover>tbody>tr:hover {
+  background: none !important;
+}
+
+.table-hover>tbody>tr:hover td {
+  color: #b01319 !important;
+}
+
 @media screen and (max-width: 768px) {
   .fh5co-cover .desc h2 {
     margin-top: 35%;
@@ -1884,30 +1943,11 @@ figure {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
 
-.pagination>.active>a,
-.pagination>.active>a:hover,
-.pagination>.active>a:focus,
-.pagination>.active>span,
-.pagination>.active>span:hover,
-.pagination>.active>span:focus {
-  background-color: #b01319;
-  border-color: #b01319;
+  #references_list td {
+    font-size: 18px;
+  }
 }
-
-.pagination>li>a,
-.pagination>li>span {
-  color: #b01319;
-}
-
-.pagination>li>a:hover,
-.pagination>li>a:focus,
-.pagination>li>span:hover,
-.pagination>li>span:focus {
-  color: #b01319;
-}
-
 
 @media (min-width: 768px) {
   .container {
@@ -1945,6 +1985,7 @@ figure {
   .contact-text p {
     margin: 0;
   }
+
 }
 
 @media screen and (min-width:992px) and (max-width:1199px) {
@@ -1997,6 +2038,35 @@ figure {
   .fh5co-cover .desc_contact h2 {
     margin-top: 14%;
   }
+
+  #references_list td {
+    font-size: 24px;
+  }
+
+  #clients_box {
+    padding: 2em 0 3em;
+  }
+
+  .clients_item {
+    height: 280px;
+  }
+
+  .clients_item3 {
+    height: 575px;
+  }
+
+  #clients_box .container .clients_item_box {
+    padding: 15px 15px 0 0;
+  }
+
+  .clients_item span.active h3 {
+    margin: 120px 0 10px 0;
+  }
+
+  .clients_item3 span.active h3 {
+    margin: 60% 0 10px 0;
+  }
+
 }
 
 @media (min-width: 1370px) {

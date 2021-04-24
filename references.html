@@ -54,43 +54,6 @@
 		.pull-left {
 			display: none;
 		}
-
-		#table thead {
-			display: none !important;
-		}
-
-		#table tr td:nth-child(1) {
-			width: 45%;
-		}
-
-		#table tr td:nth-child(2) {
-			width: 12%;
-		}
-
-		#table tr td:last-child {
-			text-align: right;
-		}
-
-		#table td {
-			border: 0;
-			font-family: 'AVENIR-M';
-			font-size: 24px;
-			line-height: 3;
-			color: #555;
-			cursor: pointer;
-		}
-
-		.table-bordered {
-			border: 0;
-		}
-
-		.table-hover>tbody>tr:hover {
-			background: none !important;
-		}
-
-		.table-hover>tbody>tr:hover td {
-			color: #b01319 !important;
-		}
 	</style>
 
 </head>
@@ -155,7 +118,7 @@
 			<!-- fh5co-content-section -->
 			<div id="fh5co-services-section" id="history-box">
 				<div class="container animate-box">
-					<table id="table"></table>
+					<table id="references_list"></table>
 				</div>
 			</div>
 			<!-- END fh5co-services-section -->
@@ -219,7 +182,7 @@
 <script>
 	$(function () {
 		var listData = jsonData;
-		$('#table').bootstrapTable({
+		$('#references_list').bootstrapTable({
 			pagination: true,
 			pageSize: 5,
 			columns: [{
