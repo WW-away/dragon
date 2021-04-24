@@ -55,7 +55,7 @@
 	<div id="fh5co-wrapper">
 		<div id="fh5co-page">
 			<div id="fh5co-header">
-				<header id="fh5co-header-section" class="museums-header">
+				<header id="fh5co-header-section" class="clients-header">
 					<div class="container">
 						<div class="row nav-header">
 							<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
@@ -96,7 +96,9 @@
 				</header>
 			</div>
 
-			<div class="fh5co-services-section museums-box">
+			<div class="fh5co-hero none-banner"></div>
+
+			<div class="fh5co-services-section clients-box">
 				<!-- Swiper -->
 				<div class="container animate-box">
 					<a href="references.html" class="back"><img src="images/back.png" alt=""></a>
@@ -181,7 +183,7 @@
 </html>
 
 <script>
-	var myswiper = new Swiper('.museums-box .swiper-container', {
+	var myswiper = new Swiper('.clients-box .swiper-container', {
 		autoplay: {
 			delay: 5000,
 			stopOnLastSlide: true
@@ -202,7 +204,7 @@
 		var url = window.location.search;
 		var id = url.split('=')[1];
 		// console.log(id);
-
+		// data.js > jsonData;
 		var listData = jsonData;
 		//var index = id-1
 		var i = id-1;

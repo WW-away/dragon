@@ -5,10 +5,11 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js">
 <!--<![endif]-->
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Home</title>
+	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -23,9 +24,12 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
+
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
-	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -34,22 +38,29 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- Superfish -->
 	<link rel="stylesheet" href="css/superfish.css">
-	<!-- Link Swiper's CSS -->
+
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style>
+		.clients-box .swiper-button-prev,.clients-box .swiper-button-next{
+			top: 35%;
+		}
+
+		.clients-box .swiper-slide{
+			text-align: left;
+		}
+	</style>
 </head>
 
 <body>
 	<div id="fh5co-wrapper">
 		<div id="fh5co-page">
 			<div id="fh5co-header">
-				<header id="fh5co-header-section">
+				<header id="fh5co-header-section" class="clients-header">
 					<div class="container">
 						<div class="row nav-header">
 							<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
@@ -61,7 +72,7 @@
 							<div class="col-md-10">
 								<nav id="fh5co-menu-wrap" role="navigation">
 									<ul class="sf-menu" id="fh5co-primary-menu">
-										<li class="active">
+										<li>
 											<a href="index.html" class="fh5co-sub-ddown">OUR SERVICES</a>
 											<ul class="fh5co-sub-menu">
 												<li><a href="" target="_blank">Packing Crating</a></li>
@@ -77,7 +88,7 @@
 											</ul>
 										</li>
 										<li><a href="about.html">ABOUT US</a></li>
-										<li><a href="clients.html">OUR CLIENTS</a></li>
+										<li class="active"><a href="clients.html">OUR CLIENTS</a></li>
 										<li><a href="references.html">REFERENCES</a></li>
 										<li><a href="">NEWS</a></li>
 										<li><a href="contact.html">CONTACT US</a></li>
@@ -90,112 +101,51 @@
 				</header>
 			</div>
 
-			<div class="fh5co-hero">
-				<div class="fh5co-overlay"></div>
-				<div class="fh5co-cover text-center" style="background-image: url(images/banner.png);">
-					<div class="desc index_desc animate-box container">
-						<h2><strong>DRAGON FINE ART</strong></h2>
-						<span>Founded in 2015 in Shanghai, Dragon Fine Art is now a well-known<br>name across China in the field of fine art packing and moving</span>
-					</div>
-				</div>
-			</div>
+			<div class="fh5co-hero none-banner"></div>
 
-			<div id="fh5co-services-section">
+			<div class="fh5co-services-section animate-box clients-box">
 				<div class="container">
-					<div class="row">
-						<div class="text-center heading-section animate-box">
-							<h3><strong>OUR SERVICES</strong></h3>
-						</div>
-					</div>
+					<a href="clients.html" class="back"><img src="images/back.png" alt=""></a>
 				</div>
 				<!-- Swiper -->
-				<div class="container animate-box swiper-container">
+				<div class="container swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<div class="row sv_list">
-								<div class="col-md-4 sv_item active">
-									<a href="service.html">
-										<img src="images/icon1_a.png" alt="">
-										<p>Packing & Crating</p>
-									</a>
-								</div>
-								<div class="col-md-4 sv_item">
-									<a href="service.html">
-										<img src="images/icon2_out.png" alt="">
-										<p>Installation & Rigging</p>
-									</a>
-								</div>
-								<div class="col-md-4 sv_item">
-									<a href="service.html">
-										<img src="images/icon3_out.png" alt="">
-										<p>Road transport</p>
-									</a>
-								</div>
-							</div>
-
-							<div class="row sv_list">
-								<div class="col-md-4 sv_item">
-									<a href="service.html">
-										<img src="images/icon4_out.png" alt="">
-										<p>Air & sea shipping</p>
-									</a>
-								</div>
-								<div class="col-md-4 sv_item">
-									<a href="service.html">
-										<img src="images/icon5_out.png" alt="">
-										<p>Airport supervision</p>
-									</a>
-								</div>
-								<div class="col-md-4 sv_item">
-									<a href="service.html">
-										<img src="images/icon6_out.png" alt="">
-										<p>Customs formalitie</p>
-									</a>
-								</div>
-							</div>
+							<img src="images/1.jpg" alt="">
+							<h3>Exhibitions</h3>
+							<p>Dragon Fine Art engages actively in the logistics of organized art exhibitions throughout the country and abroad. Whether the exhibition is in an art museum, a gallery, a trade show site, a public institution or even a shopping mall, Dragon Fine Art simply makes the import/export, installation/deinstallation a smooth experience that the clients can actually enjoy.</p>
 						</div>
 						<div class="swiper-slide">
-							<div class="row sv_list">
-								<div class="col-md-4 sv_item">
-									<a href="service.html">
-										<img src="images/icon7_out.png" alt="">
-										<p>Bonded warehouse</p>
-									</a>
-								</div>
-								<div class="col-md-4 sv_item">
-									<a href="service.html">
-										<img src="images/icon8_out.png" alt="">
-										<p>Storage</p>
-									</a>
-								</div>
-								<div class="col-md-4 sv_item">
-									<a href="service.html">
-										<img src="images/icon9_out.png" alt="">
-										<p>License & permit in China</p>
-									</a>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-4 sv_item">
-									<a href="service.html">
-										<img src="images/icon10_out.png" alt="">
-										<p>Insurance</p>
-									</a>
-								</div>
-							</div>
+							<img src="images/2.jpg" alt="">
+							<h3>Art Museums</h3>
+							<p>From the early planning stage, Dragon Fine Art lends professional advice to art museums to help them better organize the logistics schedule of their project. A designated coordinator follows up on the project from the beginning to the end to ensure that the service we deliver lives up to the promise we make.</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="images/3.jpg" alt="">
+							<h3>Galleries</h3>
+							<p>Dragon Fine Art offers the most cost-effective solutions to galleries while maintaining the maximum flexibility on the operation. All this is to help galleries promote their sales, where all business root.</p>
+						</div>
+						<div class="swiper-slide">
+							<img src="images/4.jpg" alt="">
+							<h3>Corporate & Private clients</h3>
+							<p>5.1Dragon Fine Art understands the different needs of its corporate & private clients and provides bespoke services to any occasion desired: a private collection exhibition, a new house decoration piece installation, an auctioned piece importation, or an office center piece swapping etc. </p>
+						</div>
+						<div class="swiper-slide">
+							<img src="images/5.jpg" alt="">
+							<h3>Art fairs</h3>
+							<p>Dragon Fine Art is a seasoned art fair logistics provider, with 5 consecutive years of experience serving as the official customs broker and shipping agent for ART021, one of the two large scale contemporary art fairs in Shanghai. Participating galleries are so satisfied with the service and dedication that they consign to Dragon more shipment even after the fair.</p>
 						</div>
 					</div>
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
-					<div class="swiper-pagination"></div>
 				</div>
-				<!-- <div class="container">
-					<div class="row text-center">
-					</div>
+
+				<!-- <div class="container animate-box">
+					<h3>Exhibitions</h3>
+					<p>Dragon Fine Art engages actively in the logistics of organized art exhibitions throughout the country and abroad. Whether the exhibition is in an art museum, a gallery, a trade show site, a public institution or even a shopping mall, Dragon Fine Art simply makes the import/export, installation/deinstallation a smooth experience that the clients can actually enjoy.</p>
 				</div> -->
 			</div>
-
-			<!-- END What we do -->
+			<!-- end:header-top -->
 
 			<footer>
 				<div id="footer">
@@ -213,13 +163,15 @@
 								<p class="fh5co-social-icons">
 									<a href="#" target="_blank"><i class="icon-twitter2"></i></a>
 									<a href="#" target="_blank"><i class="icon-facebook2"></i></a>
-									<a href="https://www.instagram.com/p/CNohDA7L9BN/?igshid=jp6ecusonytk" target="_blank"><i class="icon-instagram"></i></a>
+									<a href="https://www.instagram.com/p/CNohDA7L9BN/?igshid=jp6ecusonytk" target="_blank"><i
+											class="icon-instagram"></i></a>
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</footer>
+
 
 		</div>
 		<!-- END fh5co-page -->
@@ -241,42 +193,27 @@
 	<script src="js/hoverIntent.js"></script>
 	<script src="js/superfish.js"></script>
 
-	<!-- Main JS -->
+	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
 	<!-- Swiper JS -->
 	<script src="js/swiper-bundle.min.js"></script>
 	<!-- Initialize Swiper -->
-	<script>
-		var swiper = new Swiper('.swiper-container', {
-			cssMode: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			pagination: {
-				el: '.swiper-pagination',
-				clickable :true
-			},
-			mousewheel: true,
-			keyboard: true,
-		});
-	</script>
-
-	<script>
-		$(function(){
-			var $A = $(".sv_item a"); 
-			$A.mouseenter(function(){
-				$('.sv_list .active a img').attr("src","images/icon1_out.png");
-				$('.sv_list .active a p').css('color','#2d2d2d');
-				$(this).find('img').attr("src",$(this).find('img').attr("src").replace("_out","_a"));
-				$(this).find('p').css('color','#b01319');
-			})
-			$A.mouseleave(function(){
-				$(this).find('img').attr("src",$(this).find('img').attr("src").replace("_a","_out"));
-				$(this).find('p').css('color','#2d2d2d');
-			})
-		})
-	</script>
 </body>
 
 </html>
+<script>
+	var myswiper = new Swiper('.clients-box .swiper-container', {
+		autoplay: {
+			delay: 5000,
+			stopOnLastSlide: true
+		},
+		cssMode: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		mousewheel: true,
+		keyboard: true,
+		touchMove: true
+	});
+</script>

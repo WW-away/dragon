@@ -105,7 +105,7 @@
 			<!-- end:header-top -->
 			<div id="service_box" class="container">
 				<div class="service_row text-center">
-					<div class="service_item">
+					<div class="service_item" data-index="1">
 						<h3>Packing & crating</h3>
 						<span></span>
 						<div class="img-box">
@@ -114,14 +114,14 @@
 					</div>
 				</div>
 				<div class="service_row">
-					<div class="service_item">
+					<div class="service_item" data-index="2">
 						<h3 class="h3_black">Installation & Rigging</h3>
 						<span></span>
 						<div class="img-box">
 							<img src="images/service-2.jpg" alt="">
 						</div>
 					</div>
-					<div class="service_item">
+					<div class="service_item" data-index="3">
 						<h3>Road transport</h3>
 						<span></span>
 						<div class="img-box">
@@ -130,14 +130,14 @@
 					</div>
 				</div>
 				<div class="service_row">
-					<div class="service_item">
+					<div class="service_item" data-index="4">
 						<h3 class="h3_black">Air & sea shipping</h3>
 						<span></span>
 						<div class="img-box">
 							<img src="images/service-4.jpg" alt="">
 						</div>
 					</div>
-					<div class="service_item">
+					<div class="service_item" data-index="5">
 						<h3 class="h3_black">Airport supervision</h3>
 						<span></span>
 						<div class="img-box">
@@ -146,14 +146,14 @@
 					</div>
 				</div>
 				<div class="service_row">
-					<div class="service_item">
+					<div class="service_item" data-index="6">
 						<h3>Customs formalities</h3>
 						<span></span>
 						<div class="img-box">
 							<img src="images/service-6.jpg" alt="">
 						</div>
 					</div>
-					<div class="service_item">
+					<div class="service_item" data-index="7">
 						<h3>Bonded warehouse</h3>
 						<span></span>
 						<div class="img-box">
@@ -162,14 +162,14 @@
 					</div>
 				</div>
 				<div class="service_row">
-					<div class="service_item">
+					<div class="service_item" data-index="8">
 						<h3>License & permit in China</h3>
 						<span></span>
 						<div class="img-box">
 							<img src="images/service-9.jpg" alt="">
 						</div>
 					</div>
-					<div class="service_item">
+					<div class="service_item" data-index="9">
 						<h3>Storage</h3>
 						<span></span>
 						<div class="img-box">
@@ -178,7 +178,7 @@
 					</div>
 				</div>
 				<div class="service_row">
-					<div class="service_item">
+					<div class="service_item" data-index="10">
 						<h3 class="h3_black">insurance</h3>
 						<span></span>
 						<div class="img-box">
@@ -233,6 +233,7 @@
 
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+	<script src="js/data.js"></script>
 
 </body>
 
@@ -252,7 +253,8 @@
 			$(this).find('img').css('transform', 'scale(1)')
 		})
 		item.click(function(){
-			window.location.href = "";
+			var this_id = $(this).attr("data-index");
+			window.location.href = "service_main.html?id=" + this_id;
 		})
 	})
 </script>

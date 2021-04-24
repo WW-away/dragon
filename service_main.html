@@ -49,13 +49,63 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+
+	<style>
+		.service_box {
+			padding-bottom: 3em;
+		}
+
+		.service_img .swiper-slide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+		}
+
+		.service_img .swiper-container {
+			height: 700px;
+		}
+
+		.service_img .swiper-slide img {
+			height: 100%;
+		}
+
+		.service_text {
+			padding: 40px 5% 0;
+		}
+
+		.service_text h3 {
+			font-family: 'AVENIR-B';
+			font-size: 36px;
+			color: #b01319;
+			margin: 0 0 30px 0;
+			position: relative;
+		}
+
+		.service_text p {
+			text-align: left;
+			font-family: 'AVENIR-M';
+			font-size: 20px;
+		}
+
+		.service_text .swiper-container {
+			height: auto;
+			padding-top: 40px;
+		}
+
+		.service_text .swiper-pagination {
+			top: 0;
+			left: -3px;
+			width: auto;
+		}
+	</style>
 </head>
 
 <body>
 	<div id="fh5co-wrapper">
 		<div id="fh5co-page">
 			<div id="fh5co-header">
-				<header id="fh5co-header-section" class="museums-header">
+				<header id="fh5co-header-section" class="clients-header">
 					<div class="container">
 						<div class="row nav-header">
 							<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
@@ -67,7 +117,7 @@
 							<div class="col-md-10">
 								<nav id="fh5co-menu-wrap" role="navigation">
 									<ul class="sf-menu" id="fh5co-primary-menu">
-										<li>
+										<li class="active">
 											<a href="index.html" class="fh5co-sub-ddown">OUR SERVICES</a>
 											<ul class="fh5co-sub-menu">
 												<li><a href="" target="_blank">Packing Crating</a></li>
@@ -83,7 +133,7 @@
 											</ul>
 										</li>
 										<li><a href="about.html">ABOUT US</a></li>
-										<li class="active"><a href="clients.html">OUR CLIENTS</a></li>
+										<li><a href="clients.html">OUR CLIENTS</a></li>
 										<li><a href="references.html">REFERENCES</a></li>
 										<li><a href="">NEWS</a></li>
 										<li><a href="contact.html">CONTACT US</a></li>
@@ -96,26 +146,31 @@
 				</header>
 			</div>
 
-			<div class="fh5co-services-section museums-box">
-				<!-- Swiper -->
-				<div class="container animate-box">
-					<a href="clients.html" class="back"><img src="images/back.png" alt=""></a>
-				</div>
-				<div class="container animate-box swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
-						<div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
-						<div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
-						<div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
-						<div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
-					</div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-				</div>
+			<div class="fh5co-hero none-banner"></div>
 
+			<div class="fh5co-services-section service_box">
 				<div class="container animate-box">
-					<h3>Exhibitions</h3>
-					<p>Dragon Fine Art engages actively in the logistics of organized art exhibitions throughout the country and abroad. Whether the exhibition is in an art museum, a gallery, a trade show site, a public institution or even a shopping mall, Dragon Fine Art simply makes the import/export, installation/deinstallation a smooth experience that the clients can actually enjoy.</p>
+					<a href="service.html" class="back"><img src="images/back.png" alt=""></a>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 animate-box service_img">
+							<!-- Swiper -->
+							<div class="swiper-container">
+								<div class="swiper-wrapper"></div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box service_text">
+							<h3 class="title"></h3>
+							<!-- Swiper -->
+							<div class="swiper-container">
+								<div class="swiper-wrapper"></div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- end:header-top -->
@@ -168,25 +223,72 @@
 
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+	<script src="js/data.js"></script>
 	<!-- Swiper JS -->
 	<script src="js/swiper-bundle.min.js"></script>
 	<!-- Initialize Swiper -->
-	<script>
-		var myswiper = new Swiper('.museums-box .swiper-container', {
-			autoplay: {
-				delay: 5000,
-				stopOnLastSlide: true
-			},
-			cssMode: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			mousewheel: true,
-			keyboard: true,
-			touchMove: true
-		});
-	</script>
 </body>
 
 </html>
+<script>
+	var img_swiper = new Swiper('.service_img .swiper-container', {
+		autoplay: {
+			delay: 5000,
+			stopOnLastSlide: true
+		},
+		cssMode: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		observer: true, //修改swiper自己或子元素时，自动初始化swiper
+		observeParents: true, //修改swiper的父元素时，自动初始化swiper
+		mousewheel: true,
+		keyboard: true,
+		touchMove: true
+	});
+
+	var text_swiper = new Swiper('.service_text .swiper-container', {
+		autoplay: {
+			delay: 5000,
+			stopOnLastSlide: true
+		},
+		cssMode: true,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+		},
+		observer: true, //修改swiper自己或子元素时，自动初始化swiper
+		observeParents: true, //修改swiper的父元素时，自动初始化swiper
+		mousewheel: true,
+		keyboard: true,
+		touchMove: true
+	});
+</script>
+<script>
+	$(function () {
+		var url = window.location.search;
+		var id = url.split('=')[1];
+		console.log(id);
+		// data.js > servicesData
+		var servicesList = servicesData;
+		var i = id - 1;
+		$('.title').text(servicesList[i].title);
+
+		var images = servicesList[i].images;
+		// console.log(images);
+		$.each(images, function (key) {
+			console.log(images[key]);
+			$('.service_img .swiper-wrapper').append(`<div class="swiper-slide"><img src="${images[key]}" alt=""></div>`)
+		})
+
+		var p = servicesList[i].p;
+		// console.log(p);
+		$.each(p, function (key) {
+			console.log(p[key]);
+			$('.service_text .swiper-wrapper').append(`
+			<div class="swiper-slide"><p>${p[key]}</p></div>
+				`)
+		})
+	})
+</script>

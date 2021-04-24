@@ -1644,6 +1644,11 @@ figure {
   background-repeat: no-repeat;
 }
 
+.swiper-pagination-bullet {
+  width: 50px;
+  border-radius: 0%;
+}
+
 .swiper-container {
   --swiper-pagination-color: #b01319;
 }
@@ -1732,16 +1737,17 @@ figure {
   color: #fff !important;
 }
 
-.museums-box {
-  padding-top: 120px;
-}
-
-.museums-header {
+.clients-header {
   background-image: linear-gradient(#b01319, #d41a20);
   /* background-color: #b01319; */
 }
 
-.museums-box a.back {
+#service_box {
+  padding: 4em 0;
+}
+
+.clients-box a.back,
+.service_box a.back {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1753,16 +1759,16 @@ figure {
   margin: 20px 0;
 }
 
-.museums-box .swiper-container {
+.clients-box .swiper-container {
   height: auto;
 }
 
-.museums-box .swiper-wrapper img {
+.clients-box .swiper-wrapper img {
   width: 100%;
   height: auto;
 }
 
-.museums-box h3 {
+.clients-box h3 {
   font-family: 'AVENIR-B';
   font-size: 36px;
   color: #b01319;
@@ -1770,7 +1776,7 @@ figure {
   margin: 20px 0 0;
 }
 
-.museums-box P {
+.clients-box P {
   font-family: 'AVENIR-M';
   font-size: 20px;
   font-weight: 500;
@@ -1833,24 +1839,19 @@ figure {
   display: none !important;
 }
 
-#references_list tr td:nth-child(1) {
-  width: 45%;
-}
-
-#references_list tr td:nth-child(2) {
-  width: 12%;
-}
-
 #references_list tr td:last-child {
   text-align: right;
 }
 
+
 #references_list td {
   border: 0;
   font-family: 'AVENIR-M';
-  line-height: 3;
+  line-height: 1.5;
   color: #555;
   cursor: pointer;
+  vertical-align: text-top;
+  padding-bottom: 30px;
 }
 
 .table-bordered {
@@ -2066,13 +2067,13 @@ figure {
     margin: 20% 0 10px 0;
   }
 
-  .museums-box .swiper-wrapper .swiper-slide {
+  .clients-box .swiper-wrapper .swiper-slide {
     height: 220px;
     overflow: hidden;
     position: relative;
   }
 
-  .museums-box .swiper-wrapper .swiper-slide img {
+  .clients-box .swiper-wrapper .swiper-slide img {
     width: auto;
     height: 100%;
     position: absolute;
@@ -2107,6 +2108,15 @@ figure {
   .about-banner {
     position: relative;
     height: 500px;
+  }
+
+  .none-banner {
+    position: relative;
+    height: 120px;
+  }
+
+  .clients-box {
+    margin-top: 23px;
   }
 
   .contact-banner {
@@ -2185,7 +2195,7 @@ figure {
   }
 
   #references_list td {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   #clients_box {
@@ -2276,7 +2286,7 @@ figure {
     padding: 15px 15px 0 0;
   }
 
-  .museums-box .swiper-wrapper {
+  .clients-box .swiper-wrapper {
     margin: 0 15px;
   }
 }
