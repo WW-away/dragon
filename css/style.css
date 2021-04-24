@@ -50,7 +50,7 @@ a {
 
 a:hover {
   text-decoration: none !important;
-  color: #b01319 !important;
+  color: #b01319;
 }
 
 p,
@@ -103,7 +103,7 @@ figure {
 .fh5co-cover,
 .fh5co-hero {
   position: relative;
-  height: 800px;
+  /* height: 800px; */
 }
 
 .about-banner {
@@ -113,30 +113,6 @@ figure {
 
 .contact-banner {
   position: relative;
-  height: 400px;
-}
-
-@media screen and (max-width: 768px) {
-
-  .fh5co-cover,
-  .fh5co-hero {
-    height: 700px;
-  }
-
-  .about-banner {
-    position: relative;
-    height: 500px;
-  }
-
-  .contact-banner {
-    position: relative;
-    height: 300px;
-  }
-
-  .contact-banner .fh5co-cover .desc {
-    top: 80%;
-    left: 14%;
-  }
 }
 
 .fh5co-cover.fh5co-hero-2,
@@ -194,29 +170,14 @@ figure {
 }
 
 .fh5co-cover .desc {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   width: 100%;
-  margin-top: -80px;
+  margin-top: -80px; */
+  height: 100%;
+  margin: 0 auto;
   z-index: 2;
   color: #fff;
-}
-
-.fh5co-cover .desc_about {
-  top: 55%;
-  left: 15%;
-}
-
-.fh5co-cover .desc_contact {
-  top: 74%;
-  left: 15%;
-}
-
-@media screen and (max-width: 768px) {
-  .fh5co-cover .desc {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 }
 
 .fh5co-cover .desc h2 {
@@ -227,6 +188,7 @@ figure {
   font-style: italic;
   margin-bottom: 30px;
   font-weight: 300 !important;
+  margin-top: 20%;
 }
 
 .fh5co-cover .desc h2 strong {
@@ -239,21 +201,6 @@ figure {
   display: block;
   font-size: 30px;
   letter-spacing: 1px;
-}
-
-@media screen and (max-width: 768px) {
-  .fh5co-cover .desc {
-    top: 40%;
-    left: 0;
-  }
-
-  .fh5co-cover .desc h2 strong {
-    font-size: 34px;
-  }
-
-  .fh5co-cover .desc span {
-    font-size: 24px;
-  }
 }
 
 .fh5co-cover .desc span a {
@@ -1860,6 +1807,18 @@ figure {
 }
 
 @media screen and (max-width: 768px) {
+  .fh5co-cover .desc h2 {
+    margin-top: 35%;
+  }
+
+  .fh5co-cover .desc h2 strong {
+    font-size: 34px;
+  }
+
+  .fh5co-cover .desc span {
+    font-size: 24px;
+  }
+
   .sv_list a p {
     font-size: 18px;
     line-height: 24px;
@@ -1927,14 +1886,53 @@ figure {
   }
 }
 
+.pagination>.active>a,
+.pagination>.active>a:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span,
+.pagination>.active>span:hover,
+.pagination>.active>span:focus {
+  background-color: #b01319;
+  border-color: #b01319;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+  color: #b01319;
+}
+
+.pagination>li>a:hover,
+.pagination>li>a:focus,
+.pagination>li>span:hover,
+.pagination>li>span:focus {
+  color: #b01319;
+}
+
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 
+  .fh5co-cover,
+  .fh5co-hero {
+    height: 700px;
+  }
+
+  .about-banner {
+    position: relative;
+    height: 500px;
+  }
+
+  .contact-banner {
+    position: relative;
+    height: 300px;
+  }
+
   #fh5co-about .mission_box {
     padding: 1em;
   }
+
 
   #fh5co-about .row p {
     margin: 0 0 15px;
@@ -1962,10 +1960,6 @@ figure {
     padding: 2em;
   }
 
-  .fh5co-cover .desc_about {
-    left: 0;
-  }
-
   #fh5co-about .row p {
     margin: 0 0 15px;
   }
@@ -1989,7 +1983,37 @@ figure {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1300px;
+    width: 1200px !important;
+  }
+
+  .fh5co-cover .desc h2 {
+    margin-top: 22%;
+  }
+
+  .fh5co-cover .desc_about h2 {
+    margin-top: 16%;
+  }
+
+  .fh5co-cover .desc_contact h2 {
+    margin-top: 14%;
+  }
+}
+
+@media (min-width: 1370px) {
+  .container {
+    width: 1200px !important;
+  }
+
+  .fh5co-cover .desc h2 {
+    margin-top: 22%;
+  }
+
+  .fh5co-cover .desc_about h2 {
+    margin-top: 16%;
+  }
+
+  .fh5co-cover .desc_contact h2 {
+    margin-top: 14%;
   }
 
   #fh5co-about .mission_box {
