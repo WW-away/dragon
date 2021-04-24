@@ -2222,6 +2222,10 @@ figure {
     margin: 60% 0 10px 0;
   }
 
+  .contact-text h3 {
+    margin-top: 15px;
+  }
+
 }
 
 @media (min-width: 1370px) {
