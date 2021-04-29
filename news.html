@@ -39,6 +39,7 @@
 	<!-- Superfish -->
 	<link rel="stylesheet" href="css/superfish.css">
 
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
 
 
@@ -49,13 +50,69 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+		.service_box {
+			padding-bottom: 3em;
+		}
+
+		.service_img .swiper-slide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+		}
+		.service_img .swiper-slide img {
+			height: 100%;
+		}
+
+		.service_text {
+			padding: 40px 4% 0;
+		}
+
+		.service_text h3 {
+			font-family: 'AVENIR-B';
+			font-size: 36px;
+			color: #b01319;
+			margin: 0 0 30px 0;
+			position: relative;
+			text-transform: none;
+		}
+
+		.service_text p {
+			text-align: left;
+			font-family: 'AVENIR-M';
+			font-size: 24px;
+		}
+
+		.service_text .swiper-container {
+			height: auto;
+			padding-top: 40px;
+		}
+
+		.service_text .swiper-pagination {
+			top: 0;
+			left: -3px;
+			width: auto;
+		}
+		p.news_time {
+			font-family: 'AVENIR-M';
+			display: block;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%,0);
+			line-height: 103px;
+			color: #333;
+			font-size: 24px;
+			margin: 0;
+		}
+	</style>
 </head>
 
 <body>
 	<div id="fh5co-wrapper">
 		<div id="fh5co-page">
 			<div id="fh5co-header">
-				<header id="fh5co-header-section">
+				<header id="fh5co-header-section" class="clients-header">
 					<div class="container">
 						<div class="row nav-header">
 							<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
@@ -83,9 +140,9 @@
 											</ul>
 										</li>
 										<li><a href="about.html">ABOUT US</a></li>
-										<li class="active"><a href="clients.html">OUR CLIENTS</a></li>
+										<li><a href="clients.html">OUR CLIENTS</a></li>
 										<li><a href="references.html">REFERENCES</a></li>
-										<li><a href="newsList.html">NEWS</a></li>
+										<li class="active"><a href="newsList.html">NEWS</a></li>
 										<li><a href="contact.html">CONTACT US</a></li>
 									</ul>
 								</nav>
@@ -96,70 +153,37 @@
 				</header>
 			</div>
 
-			<div class="fh5co-hero about-banner">
-				<div class="fh5co-overlay"></div>
-				<div class="fh5co-cover about-banner" style="background-image: url(images/banner.png);">
-					<div class="desc desc_about animate-box container">
-						<h2><strong>OUR CLIENTS</strong></h2>
-						<span>Founded in 2015 in Shanghai, Dragon Fine Art is now a well-known<br> name across China in the field of
-							fine art packing and moving</span>
+			<div class="fh5co-hero none-banner"></div>
+
+			<div class="fh5co-services-section service_box">
+				<div class="container animate-box">
+					<div class="row">
+						<div class="col-md-6">
+							<a href="newsList.html" class="back"><img src="images/back.png" alt=""></a>
+							<p class="news_time"></p>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 animate-box service_img">
+							<!-- <a href="service.html" class="back"><img src="images/back.png" alt=""></a>
+							<p class="news_time"></p> -->
+							<!-- Swiper -->
+							<div class="swiper-container">
+								<div class="swiper-wrapper"></div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box service_text">
+							<h3 class="news_title"></h3>
+							<p class="news_text"></p>
+						</div>
 					</div>
 				</div>
 			</div>
 			<!-- end:header-top -->
-
-			<div id="clients_box">
-				<div class="container animate-box">
-					<div class="row">
-						<div class="col-md-8">
-							<div class="row">
-								<div class="col-md-4 clients_item_box" data-index="1">
-									<div class="clients_item">
-										<span class="active">
-											<h3>Exhibitions</h3><a href="clients_main.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients1.jpg" alt="">
-									</div>
-								</div>
-								<div class="col-md-8 clients_item_box" data-index="2">
-									<div class="clients_item">
-										<span class="active">
-											<h3>ART MUSEUMS</h3><a href="clients_main.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients2.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-8 clients_item_box" data-index="5">
-									<div class="clients_item">
-										<span class="active">
-											<h3>Corporate & Private clients</h3><a href="clients_main.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients4.jpg" alt="">
-									</div>
-								</div>
-								<div class="col-md-4 clients_item_box" data-index="4">
-									<div class="clients_item">
-										<span class="active">
-											<h3>Art fairs</h3><a href="clients_main.html">LEARN MORE</a>
-										</span>
-										<img src="images/clients5.jpg" alt="">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 clients_item_box" data-index="3">
-							<div class="clients_item clients_item3">
-								<span class="active">
-									<h3>Galleries</h3><a href="clients_main.html">LEARN MORE</a>
-								</span>
-								<img src="images/clients3.jpg" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<footer>
 				<div id="footer">
@@ -175,7 +199,7 @@
 									<li>+ 021 7756 8121</li>
 								</ul>
 								<p class="fh5co-social-icons">
-									<a href="#" target="_blank"><i class="icon-twitter2"></i></a>
+									<a href="https://twitter.com/DragonFineArt" target="_blank"><i class="icon-twitter2"></i></a>
 									<a href="#" target="_blank"><i class="icon-facebook2"></i></a>
 									<a href="https://www.instagram.com/p/CNohDA7L9BN/?igshid=jp6ecusonytk" target="_blank"><i
 											class="icon-instagram"></i></a>
@@ -209,21 +233,54 @@
 
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+	<script src="js/data.js"></script>
+	<!-- Swiper JS -->
+	<script src="js/swiper-bundle.min.js"></script>
+	<!-- Initialize Swiper -->
 </body>
 
 </html>
 <script>
+	var img_swiper = new Swiper('.service_img .swiper-container', {
+		autoplay: {
+			delay: 5000,
+			stopOnLastSlide: true
+		},
+		cssMode: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		observer: true, //修改swiper自己或子元素时，自动初始化swiper
+		observeParents: true, //修改swiper的父元素时，自动初始化swiper
+		mousewheel: true,
+		keyboard: true,
+		touchMove: true
+	});
+</script>
+<script>
 	$(function () {
-		var item = $('.clients_item_box .clients_item');
-		
-		item.mouseenter(function () {
-			$('.clients_item_box .clients_item .active').hide();
-			$(this).find('.active').show()
-			$(this).find('img').css('transform', 'scale(1.2)')
-		});
-		item.mouseleave(function () {
-			$(this).find('.active').hide()
-			$(this).find('img').css('transform', 'scale(1)')
+		var url = window.location.search;
+		var id = url.split('=')[1];
+		console.log(id);
+		// data.js > servicesData
+		var listData = newsData;
+		var i = id - 1;
+		$('.news_time').text(listData[i].time);
+		$('.news_title').text(listData[i].title);
+
+		var images = listData[i].images;
+		// console.log(images);
+		$.each(images, function (key) {
+			console.log(images[key]);
+			$('.service_img .swiper-wrapper').append(`<div class="swiper-slide"><img src="${images[key]}" alt=""></div>`)
+		})
+
+		var p = listData[i].p;
+		// console.log(p);
+		$.each(p, function (key) {
+			console.log(p[key]);
+			$('.news_text').text(listData[i].p);
 		})
 	})
 </script>

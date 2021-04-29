@@ -111,6 +111,11 @@ figure {
   height: 600px;
 }
 
+.news-banner {
+  position: relative;
+  height: 450px;
+}
+
 .contact-banner {
   position: relative;
 }
@@ -1748,15 +1753,9 @@ figure {
 
 .clients-box a.back,
 .service_box a.back {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-  background-color: #eee;
-  margin: 20px 0;
+  display: block;
+  float: left;
+  margin: 25px 0;
 }
 
 .clients-box .swiper-container {
@@ -1843,6 +1842,9 @@ figure {
   text-align: right;
 }
 
+#news_list thead {
+  display: none !important;
+}
 
 #references_list td {
   border: 0;
@@ -1854,15 +1856,24 @@ figure {
   padding-bottom: 30px;
 }
 
+#news_list td {
+  border: 0;
+  font-family: 'AVENIR-M';
+  line-height: 1;
+  color: #555;
+  cursor: pointer;
+  vertical-align: auto;
+}
+
 .table-bordered {
   border: 0;
 }
 
-.table-hover>tbody>tr:hover {
+.container .table-hover tbody tr:hover {
   background: none !important;
 }
 
-.table-hover>tbody>tr:hover td {
+.container .table-hover tbody tr:hover td {
   color: #b01319 !important;
 }
 
@@ -2002,11 +2013,122 @@ figure {
   display: none;
 }
 
+/* newsList */
+.list-box {
+  margin: 0 auto;
+}
+
+.list-box #news_list {
+  width: 98%;
+  margin: 1%;
+}
+
+#news_list tr:hover {
+  box-shadow: 0px 0px 12px #bbbbbb;
+}
+
+#news_list tr {
+  display: block;
+  padding: 20px;
+  margin: 0 auto 60px;
+  background-color: #fff;
+}
+
+#news_list tr td:nth-child(1) {
+  font-family: 'AVENIR-B';
+  display: inline-block;
+  text-align: center;
+  width: 4%;
+  font-size: 24px;
+  color: #b01319;
+  border-bottom: 3px solid #b01319;
+}
+
+#news_list tr td:nth-child(2) {
+  font-family: 'AVENIR-M';
+  font-weight: 600;
+  display: inline-block;
+  width: 80%;
+  margin-left: 1%;
+  font-size: 36px;
+  color: #b01319;
+}
+
+#news_list tr td:nth-child(3) {
+  display: inline-block;
+  text-align: right;
+  width: 15%;
+  font-size: 24px;
+}
+
+#news_list tr td:nth-child(4) {
+  display: -webkit-box;
+  display: box;
+  margin-left: 5%;
+  text-align: left;
+  width: 95%;
+  font-size: 20px;
+  line-height: 36px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
 
 @media screen and (max-width: 768px) {
 
   .service_row .service_item h3 {
     font-size: 14px;
+  }
+
+  #news_list tr {
+    padding: 10px;
+    margin: 0 auto 30px;
+  }
+
+  #news_list tr td:nth-child(1) {
+    width: 14%;
+    font-size: 24px;
+    border-bottom: 3px solid #b01319;
+  }
+
+  #news_list tr td:nth-child(2) {
+    font-family: 'AVENIR-M';
+    width: 85%;
+    margin-left: 1%;
+    font-size: 20px;
+    color: #b01319;
+  }
+
+  #news_list tr td:nth-child(3) {
+    text-align: right;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #news_list tr td:nth-child(4) {
+    display: -webkit-box;
+    display: box;
+    margin-left: 15%;
+    text-align: left;
+    width: 85%;
+    font-size: 16px;
+    line-height: 32px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+  }
+
+  .none-banner {
+    position: relative;
+    height: 120px;
+  }
+
+  .service_img .swiper-container {
+    height: 500px;
   }
 
   .fh5co-cover .desc h2 {
@@ -2100,9 +2222,18 @@ figure {
     width: 750px;
   }
 
+  .service_img .swiper-container {
+    height: 500px;
+  }
+
   .fh5co-cover,
   .fh5co-hero {
     height: 700px;
+  }
+
+  .news-banner {
+    position: relative;
+    height: 450px;
   }
 
   .about-banner {
@@ -2121,7 +2252,7 @@ figure {
 
   .contact-banner {
     position: relative;
-    height: 300px;
+    height: 450px;
   }
 
   #fh5co-about .mission_box {
@@ -2145,7 +2276,11 @@ figure {
 
 @media screen and (min-width:992px) and (max-width:1199px) {
   .container {
-    width: 1040px;
+    width: 1024px;
+  }
+
+  .service_img .swiper-container {
+    height: 500px;
   }
 
   .sf-menu a {
@@ -2182,6 +2317,10 @@ figure {
     width: 1200px !important;
   }
 
+  .service_img .swiper-container {
+    height: 700px;
+  }
+
   .fh5co-cover .desc h2 {
     margin-top: 22%;
   }
@@ -2191,7 +2330,7 @@ figure {
   }
 
   .fh5co-cover .desc_contact h2 {
-    margin-top: 14%;
+    margin-top: 18%;
   }
 
   #references_list td {
@@ -2233,6 +2372,10 @@ figure {
     width: 1200px !important;
   }
 
+  .service_img .swiper-container {
+    height: 700px;
+  }
+
   .fh5co-cover .desc h2 {
     margin-top: 22%;
   }
@@ -2242,7 +2385,7 @@ figure {
   }
 
   .fh5co-cover .desc_contact h2 {
-    margin-top: 14%;
+    margin-top: 18%;
   }
 
   #fh5co-about .mission_box {

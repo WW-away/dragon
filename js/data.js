@@ -189,3 +189,48 @@ var servicesData = [{
   ]
 },
 ]
+
+var newsData = [{
+  "id": "01",
+  "title": "We are pleased to announce that on January 5",
+  "images": ["images/service-1.jpg", "images/service-5.jpg", "images/service-8.jpg"],
+  "time": "2021 January",
+  "images": ["images/service-1.jpg", "images/service-5.jpg", "images/service-8.jpg"],
+  "p": ["Domestic sales and import/export of synthetic resin materials, products and related products Sales, rental and management of logistics equipment and materials, including plastic pallets, containers and racks Supplies for convenience stores..."]
+},
+{
+  "id": "02",
+  "title": "We are pleased to announce that on January 5",
+  "time": "2021 January",
+  "images": ["images/service-1.jpg", "images/service-5.jpg", "images/service-8.jpg"],
+  "p": ["Domestic sales and import/export of synthetic resin materials, products and related products Sales, rental and management of logistics equipment and materials, including plastic pallets, containers and racks Supplies for convenience stores..."]
+},
+{
+  "id": "03",
+  "title": "We are pleased to announce that on January 5",
+  "time": "2021 January",
+  "images": ["images/service-1.jpg", "images/service-5.jpg", "images/service-8.jpg"],
+  "p": ["Domestic sales and import/export of synthetic resin materials, products and related products Sales, rental and management of logistics equipment and materials, including plastic pallets, containers and racks Supplies for convenience stores..."]
+},
+{
+  "id": "04",
+  "title": "We are pleased to announce that on January 5",
+  "time": "2021 January",
+  "images": ["images/service-1.jpg", "images/service-5.jpg", "images/service-8.jpg"],
+  "p": ["Domestic sales and import/export of synthetic resin materials, products and related products Sales, rental and management of logistics equipment and materials, including plastic pallets, containers and racks Supplies for convenience stores..."]
+},
+{
+  "id": "05",
+  "title": "We are pleased to announce that on January 5",
+  "time": "2021 January",
+  "images": ["images/service-1.jpg", "images/service-5.jpg", "images/service-8.jpg"],
+  "p": ["Domestic sales and import/export of synthetic resin materials, products and related products Sales, rental and management of logistics equipment and materials, including plastic pallets, containers and racks Supplies for convenience stores..."]
+},
+{
+  "id": "06",
+  "title": "We are pleased to announce that on January 5",
+  "time": "2021 January",
+  "images": ["images/service-1.jpg", "images/service-5.jpg", "images/service-8.jpg"],
+  "p": ["Domestic sales and import/export of synthetic resin materials, products and related products Sales, rental and management of logistics equipment and materials, including plastic pallets, containers and racks Supplies for convenience stores..."]
+},
+]
